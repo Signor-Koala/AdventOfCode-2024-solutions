@@ -1,2 +1,3 @@
 (library
- (name AOC_2024))
+ (name AOC_2024)
+ (libraries str))

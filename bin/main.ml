@@ -1,4 +1,4 @@
-let usage = "aocaml2024 -d <day> -p <part> <input_file>"
+let usage = "AOC_2024 -d <day> -p <part> <input_file>"
 let day = ref 0
 let input_file = ref ""
 let part = ref 0
@@ -18,7 +18,7 @@ let () =
   let f1, f2 =
     match !day with
     | 0 -> (AOC_2024.Day00.part1, AOC_2024.Day00.part2)
-    | 1 -> failwith "Unimplimented"
+    | 1 -> (AOC_2024.Day01.part1, AOC_2024.Day01.part2)
     | 2 -> failwith "Unimplimented"
     | 3 -> failwith "Unimplimented"
     | 4 -> failwith "Unimplimented"
