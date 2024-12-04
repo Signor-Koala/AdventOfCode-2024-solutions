@@ -21,7 +21,7 @@ let () =
     | 1 -> (AOC_2024.Day01.part1, AOC_2024.Day01.part2)
     | 2 -> (AOC_2024.Day02.part1, AOC_2024.Day02.part2)
     | 3 -> (AOC_2024.Day03.part1, AOC_2024.Day03.part2)
-    | 4 -> failwith "Unimplimented"
+    | 4 -> (AOC_2024.Day04.part1, AOC_2024.Day04.part2)
     | 5 -> failwith "Unimplimented"
     | 6 -> failwith "Unimplimented"
     | 7 -> failwith "Unimplimented"
