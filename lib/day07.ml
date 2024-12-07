@@ -11,7 +11,15 @@ let process_lines s =
       Util.print_list print_string l;
       failwith "Invalid line"
 
-let ( ||? ) h t = int_of_string (string_of_int h ^ string_of_int t)
+let rec pow a = function
+  | 0 -> 1
+  | 1 -> a
+  | n ->
+      let b = pow a (n / 2) in
+      b * b * if n mod 2 = 0 then 1 else a
+
+let rec digits a = if a / 10 = 0 then 1 else 1 + digits (a / 10)
+let ( ||? ) h t = (h * pow 10 (digits t)) + t
 
 let rec get_possibilities ?(concat = false) eqn =
   match eqn with
@@ -33,6 +41,7 @@ let add_passes ?(concat = false) lst =
   |> List.fold_left ( + ) 0
 
 let parse_input (s : string) : input_t =
+  print_int (123 ||? 456);
   s |> String.split_on_char '\n'
   |> List.filter (fun s -> not (String.equal String.empty s))
   |> List.map process_lines
