@@ -1,6 +1,7 @@
 type input_t = (int * int list) list
 type output_t = int
 
+(** Helper functions *)
 let process_lines s =
   match String.split_on_char ':' s with
   | [ test; eqn ] ->
@@ -40,6 +41,7 @@ let add_passes ?(concat = false) lst =
   |> List.map (fun (test, _) -> test)
   |> List.fold_left ( + ) 0
 
+(** Solver functions *)
 let parse_input (s : string) : input_t =
   print_int (123 ||? 456);
   s |> String.split_on_char '\n'
@@ -50,6 +52,7 @@ let solve1 (inp : input_t) : output_t = add_passes inp
 let solve2 (inp : input_t) : output_t = add_passes ~concat:true inp
 let parse_output (out : output_t) : string = string_of_int out
 
+(** End to end functions *)
 let part1 (input_text : string) : string =
   input_text |> parse_input |> solve1 |> parse_output
 
