@@ -27,7 +27,7 @@ let () =
     | 7 -> AOC_2024.Day07.(part1, part2)
     | 8 -> AOC_2024.Day08.(part1, part2)
     | 9 -> AOC_2024.Day09.(part1, part2)
-    | 10 -> failwith "Unimplimented"
+    | 10 -> AOC_2024.Day10.(part1, part2)
     | 11 -> failwith "Unimplimented"
     | 12 -> failwith "Unimplimented"
     | 13 -> failwith "Unimplimented"
